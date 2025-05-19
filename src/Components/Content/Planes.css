@@ -1,0 +1,31 @@
+body {
+    background: #fff !important;
+}
+
+.iconBack {
+    width: fit-content;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 18px !important;
+    line-height: 20px !important;
+    letter-spacing: 0.4px !important;
+    vertical-align: middle;
+    color: #4F4FFF !important;
+}
+
+.planes--access {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.6px;
+    color: #141938;
+}
+
+.planes__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    align-items: center;
+    color: #141938;
+}

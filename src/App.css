@@ -36,3 +36,145 @@
     transform: rotate(360deg);
   }
 }
+
+/* New */
+
+body {
+  background-image: linear-gradient(to right top, #d77fff, #d89bff, #dcb5ff, #e2ccff, #ece3ff, #e6ecff, #e7f3ff, #eef9ff, #d1f9ff, #affaff, #88fbff, #5ffbf1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100%;
+  padding: 0px;
+}
+
+.header {
+  padding: 20px;
+
+  .header__message {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+    font-weight: 600;
+    color: #03050F;
+  }
+
+  .header__number {
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0.4px;
+    font-weight: 700;
+    color: #03050F;
+  }
+}
+
+.body {
+  flex: 1;
+  padding: 20px;
+
+  .body__image {
+    width: 480px;
+    height: 560px;
+    border-radius: 10px;
+  }
+
+  .body__image--maxcontent {
+    align-content: normal;
+   }
+
+  .body__image--mincontent {
+    text-align: center;
+    display: none;
+  }
+  
+  .body__image--visible {
+    width: 136px;
+    height: 160px;
+    border-radius: 10px;
+  }
+
+  .body__secure {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    background: linear-gradient(100deg, #00F4E2, #00ff00);
+    padding: 4px;
+    border-radius: 4px;
+    gap: 4px;
+    vertical-align: middle;
+    color: #03050F;
+  }
+
+  .body__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0%;
+    color: #03050F;
+  }
+}
+
+.footer {
+  padding: 10px;
+  text-align: center;
+  background-color: #03050F;
+
+  .footer__message {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    color: #F8F9FF;
+  }
+
+}
+
+@media (max-width: 1600px) {
+  .body {
+    .body__image--maxcontent {
+      align-content: center !important;
+    }
+    .body__image {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+  .body {
+    .body__image {
+      display: none !important;
+    }
+    .body__image--mincontent {
+      display: block !important;
+    }
+  }
+  .footer {
+    .text-start, .text-end {
+      text-align: center !important;
+    }
+    .text-end {
+      padding-top: 1rem !important;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    .header__message {
+      display: none !important;
+    }
+  }
+}
+
+
+/* New */
