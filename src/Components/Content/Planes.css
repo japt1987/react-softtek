@@ -29,3 +29,80 @@ body {
     align-items: center;
     color: #141938;
 }
+
+.planes__card {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.2px;
+    color: #141938;
+}
+
+.planes__card__content {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #141938;
+}
+
+.planes__card__quote {
+    margin-top: auto;
+}
+
+.listCard_button {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+}
+
+.listCard__top {
+    margin: auto;
+}
+
+.listCard__title {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+    color: #141938;
+}
+
+.listCard__message {
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    color: #7981B2;
+}
+
+.listCard__price {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+    color: #141938;
+}
+
+.listCard__row {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.1px;
+    color: #141938;
+}
+
+@media (max-width: 992px) {
+    .planes__card__quote:last-child .col-sm-12 {
+        border-radius: 24px;  
+        height: auto;
+      
+    }
+    .planes__card__quote:last-child .col-sm-12:last-child{
+        margin-top: 1.5rem !important;
+    }
+    .listCard__top {
+        margin-bottom: 1.5rem !important;
+    }
+}
