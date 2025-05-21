@@ -12,8 +12,9 @@ import Footer from '../../../Components/Footer/Footer';
 
 /* Style important */
 import './DetailPlan.css';
+import HorizontalLinearStepper from '../../../Components/Stepper/Stepper';
 
-export const DetailPlan = () => {
+const DetailPlan = () => {
   const valueCookie = Cookies.get('admin'); // reemplaza 'nombreCookie' por el nombre real
   const valueCookieParse = JSON.parse(valueCookie); // parseamos el Cookies Json
   return (
@@ -38,8 +39,17 @@ function StartDetailPlan(valueCookieParse) {
 }
 
 function ContentDetailPlan({valueCookieParse}) {
+  const steps = ['Planes y coberturas', 'Resumen'];
   return (
-  <main className='body'>
+    <>
+    {/* Stepper */}
+    <div className='row m-0 justify-content-center stepper__color'>
+      <div className='col-sm-9 col-md-7 col-lg-5 col-xl-3'>
+        <HorizontalLinearStepper steps={steps} active={1} text={false} back={false} next={false} end={false} click={false}/>
+      </div>
+    </div>
+    {/* Stepper */}
+    <main className='body'>
     <div className='row m-0 justify-content-center'>
       <div className='col-sm-10 col-md-10 col-lg-9 col-xl-8'>
 
@@ -55,6 +65,7 @@ function ContentDetailPlan({valueCookieParse}) {
         </div>
       </div>
     </main>
+    </>
   );
 }
 
@@ -110,7 +121,7 @@ function Content({valueCookieParse}) {
       <div className='col-12'>
 
         {/* Card lista de planes */}
-        <Card style={{ borderRadius: 24 }}>
+        <Card style={{ borderRadius: 24, boxShadow: 'rgba(174, 172, 243, 0.35) 0px 1px 32px' }}>
           <Card.Body>
             <Card.Title>
               <div className='row mt-2'>
@@ -138,11 +149,11 @@ function Content({valueCookieParse}) {
               <div className='col-12'>
                 <Card.Text>
                   <label className='detale__row'>Responsable de pago</label> <br/>
-                  <label className='detale__row--data'>{valueCookieParse.valueCookie.detail[0].typDoc }: {valueCookieParse.valueCookie.detail[0].dni }</label><br/>
-                  <label className='detale__row--data'>Celular: {valueCookieParse.valueCookie.detail[0].cel}</label><br/>
+                  <label className='detale__row--data'>{valueCookieParse.valueCookie.detail[0].typDoc }: <b>{valueCookieParse.valueCookie.detail[0].dni }</b></label><br/>
+                  <label className='detale__row--data'>Celular: <b>{valueCookieParse.valueCookie.detail[0].cel}</b></label><br/>
                   <label className='mt-3 detale__row'>Plan elegido</label><br/>
                   <label className='detale__row--data'>{Data.name}</label><br/>
-                  <label className='detale__row--data'>Costo del Plan: ${parseFloat(Data.totPri)} al mes</label>
+                  <label className='detale__row--data'>Costo del Plan: <b>${parseFloat(Data.totPri)}</b> al mes</label>
                 </Card.Text>
               </div>
             </div>

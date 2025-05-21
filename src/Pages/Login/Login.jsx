@@ -1,7 +1,6 @@
 /* Import styles and script */
 import React, { useState } from 'react';
 import { TextField, MenuItem, FormControl, Box, Select, Checkbox, Button  } from '@mui/material';
-import { grey } from '@mui/material/colors';
 import { Modal } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
@@ -9,7 +8,7 @@ import Cookies from 'js-cookie';
 /* Style important */
 import './Login.css';
 
-export const Login = () => {
+const Login = () => {
   /* Para el select */
   const selectDocumentProps = { inputProps: { 'aria-label': 'Without label' }};
   /* Modal */
@@ -182,7 +181,7 @@ function FormLogin({selectDocumentProps, modalShow, setModalShow}) {
           } else { 
             setCheckPolicyOneError(true); /* Regresa con el error */ }
           }}
-        sx={{ color: checkPolicyOneError ? 'red' : grey[800], '&.Mui-checked': { color: checkPolicyOneError ? 'red' : grey[600]}, padding: 0 }}
+        sx={{ color: checkPolicyOneError ? 'red' : 'black', '&.Mui-checked': { color: checkPolicyOneError ? 'red' : 'black'}, padding: 0 }}
         />
         <label style={{ color: checkPolicyOneError ? 'red' : '#0A051E' }}>Acepto la Política de Privacidad</label><br/>
         {/* Campos Checkbox */}
@@ -198,7 +197,7 @@ function FormLogin({selectDocumentProps, modalShow, setModalShow}) {
           } else { 
             setCheckPolicyTwoError(true); /* Regresa con el error */ }
           }}
-        sx={{ color: checkPolicyTwoError ? 'red' : grey[800], '&.Mui-checked': { color: checkPolicyTwoError ? 'red' : grey[600]}, padding: 0 }}
+        sx={{ color: checkPolicyTwoError ? 'red' : 'black', '&.Mui-checked': { color: checkPolicyTwoError ? 'red' : 'black'}, padding: 0 }}
         />
         <label style={{ color: checkPolicyTwoError ? 'red' : '#0A051E' }}>Acepto la Política Comunicaciones Comerciales</label>
         {/* Campos Checkbox */}

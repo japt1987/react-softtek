@@ -18,6 +18,7 @@ import AddUser from '../../../Assets/img/png/IcAddUserLight.png';
 /* Pages */
 import Header from '../../../Components/Header/Header';
 import Footer from '../../../Components/Footer/Footer';
+import HorizontalLinearStepper from '../../../Components/Stepper/Stepper';
 
 /* Services */
 import { GetListUser, GetListPlans } from '../../../Services/Api';
@@ -25,7 +26,7 @@ import { GetListUser, GetListPlans } from '../../../Services/Api';
 /* Style important */
 import './Plans.scss';
 
-export const Plans = () => {
+const Plans = () => {
   const valueCookie = Cookies.get('admin'); // reemplaza 'nombreCookie' por el nombre real
   const valueCookieParse = JSON.parse(valueCookie); // parseamos el Cookies Json
   return (
@@ -50,7 +51,16 @@ function StartPlans(valueCookieParse) {
 }
 
 function ContentPlans() {
+  const steps = ['Planes y coberturas', 'Resumen'];
   return (
+  <>
+  {/* Stepper */}
+  <div className='row m-0 justify-content-center stepper__color'>
+    <div className='col-sm-9 col-md-7 col-lg-5 col-xl-3'>
+      <HorizontalLinearStepper steps={steps} active={0} text={false} back={false} next={false} end={false} click={false}/>
+    </div>
+  </div>
+  {/* Stepper */}
   <main className='body'>
     <div className='row m-0 justify-content-center'>
       <div className='col-sm-10 col-md-10 col-lg-9 col-xl-8'>
@@ -67,6 +77,7 @@ function ContentPlans() {
         </div>
       </div>
     </main>
+    </>
   );
 }
 
@@ -184,7 +195,7 @@ function PlansCondition({myValueYear}) {
         <div className='col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex justify-content-center'>
           {/* Card para Mí */}
           <Card 
-          style={{ width: '256px', height: '212px', borderRadius: 24, ...(checkOptionGroup === 'optionForMy' ? colorCheck : '') }}>
+          style={{ width: '256px', height: '212px', borderRadius: 24, boxShadow: 'rgba(174, 172, 243, 0.35) 0px 1px 32px', ...(checkOptionGroup === 'optionForMy' ? colorCheck : '') }}>
             <Card.Body>
               <Card.Title>
  
@@ -221,7 +232,7 @@ function PlansCondition({myValueYear}) {
         
         <div className='col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex justify-content-center'>
           {/* Card para alguien más */}
-          <Card style={{ width: '256px', height: '212px', borderRadius: 24, ...(checkOptionGroup === 'optionForMore' ? colorCheck : '') }}>
+          <Card style={{ width: '256px', height: '212px', borderRadius: 24, boxShadow: 'rgba(174, 172, 243, 0.35) 0px 1px 32px', ...(checkOptionGroup === 'optionForMore' ? colorCheck : '') }}>
             <Card.Body>
               <Card.Title>
 
@@ -302,7 +313,7 @@ function ListPlans({myValueYear, checkOptionGroup}) {
             <div key={data.name} className='col-sm-12 col-md-6 col-lg-4 col-xl-4 listCard__top'>
 
               {/* Card lista de planes */}
-              <Card style={{ borderRadius: 24, height: 687 }}>
+              <Card style={{ borderRadius: 24, height: 687, boxShadow: 'rgba(174, 172, 243, 0.35) 0px 1px 32px' }}>
                 <Card.Body>
                   <Card.Title>
                     <div className={`row ${data.name === 'Plan en Casa y Clínica' ? 'mt-4': 'mt-5'}`}>
