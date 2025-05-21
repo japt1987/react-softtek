@@ -1,4 +1,5 @@
-export const ListUser = async () => {
+/* Servicio del Usuario */
+export const GetListUser = async () => {
     const response = await fetch('https://rimac-front-end-challenge.netlify.app/api/user.json'); 
     if (!response.ok) {
         throw new Error('Error al cargar los datos');
@@ -7,7 +8,8 @@ export const ListUser = async () => {
     return data;
 }
 
-export const ListPlanes = async () => {
+/* Servicio de la lista de Planes */
+export const GetListPlans = async () => {
     const response = await fetch('https://rimac-front-end-challenge.netlify.app/api/plans.json'); 
     if (!response.ok) {
         throw new Error('Error al cargar los datos');

@@ -2,6 +2,8 @@ body {
     background: #fff !important;
 }
 
+$color-blue-two: #141938;
+
 .iconBack {
     width: fit-content;
     gap: 8px;
@@ -13,44 +15,49 @@ body {
     color: #4F4FFF !important;
 }
 
-.planes--access {
+.iconBack:hover {
+    background-color: #03050F !important;
+    color: #fff !important;
+}
+
+.plans--access {
     font-size: 40px;
     font-weight: 700;
     line-height: 48px;
     letter-spacing: -0.6px;
-    color: #141938;
+    color: $color-blue-two;
 }
 
-.planes__description {
+.plans__description {
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
     letter-spacing: 0.1px;
     align-items: center;
-    color: #141938;
+    color: $color-blue-two;
 }
 
-.planes__card {
+.plans__card {
     font-weight: 900;
     font-size: 20px;
     line-height: 26px;
     letter-spacing: -0.2px;
-    color: #141938;
+    color: $color-blue-two;
 }
 
-.planes__card__content {
+.plans__card__content {
     font-weight: 400;
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 0.2px;
-    color: #141938;
+    color: $color-blue-two;
 }
 
-.planes__card__quote {
+.plans__card__quote {
     margin-top: auto;
 }
 
-.listCard_button {
+.listCard__button {
     font-weight: 700;
     font-size: 18px;
     line-height: 20px;
@@ -66,7 +73,7 @@ body {
     font-size: 24px;
     line-height: 32px;
     letter-spacing: -0.2px;
-    color: #141938;
+    color: $color-blue-two;
 }
 
 .listCard__message {
@@ -82,7 +89,7 @@ body {
     font-size: 20px;
     line-height: 28px;
     letter-spacing: -0.2px;
-    color: #141938;
+    color: $color-blue-two;
 }
 
 .listCard__row {
@@ -90,16 +97,17 @@ body {
     font-size: 16px;
     line-height: 28px;
     letter-spacing: 0.1px;
-    color: #141938;
+    color: $color-blue-two;
+    min-height: 370px;
 }
 
 @media (max-width: 992px) {
-    .planes__card__quote:last-child .col-sm-12 {
+    .plans__card__quote:last-child .col-sm-12 {
         border-radius: 24px;  
         height: auto;
       
     }
-    .planes__card__quote:last-child .col-sm-12:last-child{
+    .plans__card__quote:last-child .col-sm-12:last-child{
         margin-top: 1.5rem !important;
     }
     .listCard__top {

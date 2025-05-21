@@ -1,0 +1,40 @@
+body {
+    background: #fff !important;
+  /*    margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;*/
+}
+
+.detalle__title {
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 0.8px;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+.detalle--name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+    vertical-align: middle;
+}
+
+.detale__row {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    vertical-align: middle;
+}
+
+.detale__row--data {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    vertical-align: middle;
+}

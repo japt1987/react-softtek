@@ -1,47 +1,8 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* New */
-
 body {
   background-image: linear-gradient(to right top, #d77fff, #d89bff, #dcb5ff, #e2ccff, #ece3ff, #e6ecff, #e7f3ff, #eef9ff, #d1f9ff, #affaff, #88fbff, #5ffbf1);
 }
+
+$color-blue-one: #03050F;
 
 .container {
   display: flex;
@@ -59,7 +20,7 @@ body {
     line-height: 16px;
     letter-spacing: 0.2px;
     font-weight: 600;
-    color: #03050F;
+    color: $color-blue-one;
   }
 
   .header__number {
@@ -67,7 +28,7 @@ body {
     line-height: 18px;
     letter-spacing: 0.4px;
     font-weight: 700;
-    color: #03050F;
+    color: $color-blue-one;
   }
 }
 
@@ -106,7 +67,7 @@ body {
     border-radius: 4px;
     gap: 4px;
     vertical-align: middle;
-    color: #03050F;
+    color: $color-blue-one;
   }
 
   .body__title {
@@ -114,14 +75,14 @@ body {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0%;
-    color: #03050F;
+    color: $color-blue-one;
   }
 }
 
 .footer {
   padding: 10px;
   text-align: center;
-  background-color: #03050F;
+  background-color: $color-blue-one;
 
   .footer__message {
     font-size: 14px;
@@ -132,6 +93,14 @@ body {
   }
 
 }
+
+.line {
+  border-width: 1px;
+  border-color: #D7DBF5;
+  border-style: solid;
+}
+
+/* Media */
 
 @media (max-width: 1600px) {
   .body {
@@ -145,9 +114,7 @@ body {
   }
 }
 
-@media (max-width: 992px) {
-
-}
+@media (max-width: 992px) { }
 
 @media (max-width: 768px) {
   .body {
@@ -175,6 +142,3 @@ body {
     }
   }
 }
-
-
-/* New */
