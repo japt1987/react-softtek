@@ -314,7 +314,7 @@ function ListPlans({myValueYear, checkOptionGroup}) {
 
               {/* Card lista de planes */}
               <Card style={{ borderRadius: 24, height: 687, boxShadow: 'rgba(174, 172, 243, 0.35) 0px 1px 32px' }}>
-                <Card.Body>
+                <Card.Body className='d-flex flex-column' >
                   <Card.Title>
                     <div className={`row ${data.name === 'Plan en Casa y Clínica' ? 'mt-4': 'mt-5'}`}>
                       <div className='auto'>
@@ -384,7 +384,7 @@ function SelectPlan({data}) {
 
   return (
   <>
-  <div className='row position-absolute bottom-0 w-100'>
+  <div className='row mt-auto'>
     <div className='col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3 mb-3 text-center listCard__button'>
       <Button variant="danger" onClick={() => selectPlan(data)}>Seleccionar Plan</Button>
     </div>
