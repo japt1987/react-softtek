@@ -38,3 +38,24 @@ body {
     letter-spacing: 0.1px;
     vertical-align: middle;
 }
+
+/* Media */
+
+@media (max-width: 1550px) {    
+    .body .body_content {
+        width: 68%;    
+    }
+}
+
+@media (max-width: 1250px) {   
+    .body .body_content {
+        width: 80%;    
+    }
+}
+
+@media (max-width: 768px) {    
+    .body .body_content {
+        width: 100%;
+        padding: 0px;
+    }
+}

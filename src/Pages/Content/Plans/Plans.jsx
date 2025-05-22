@@ -39,7 +39,7 @@ function StartPlans(valueCookieParse) {
   const Admin = valueCookieParse.valueCookie.user;
   if (Admin === 'jesuspeña') {
     return (
-    <div className='container'>
+    <div className='container page__plans'>
       <Header/>
       <ContentPlans/>
       <Footer/>
@@ -63,7 +63,7 @@ function ContentPlans() {
   {/* Stepper */}
   <main className='body'>
     <div className='row m-0 justify-content-center'>
-      <div className='col-sm-10 col-md-10 col-lg-9 col-xl-8'>
+      <div className='col-sm-10 col-md-9 col-lg-8 col-xl-7 body_content'>
 
         {/* Volver */}
         <div className='row'>
@@ -152,7 +152,7 @@ function ListUser() {
   return (
     <>
     <div className='row m-0 mt-5 justify-content-center'>
-      <div className='col-sm-12 col-md-11 col-lg-10 col-xl-9'>
+      <div className='col-11 col-sm-11 col-md-11 col-lg-10 col-xl-9'>
 
         <div className='row justify-content-center text-center'>
           <div className='col-sm-12 col-md-9 col-lg-8 col-xl-7'>
@@ -310,7 +310,7 @@ function ListPlans({myValueYear, checkOptionGroup}) {
         <div className='row'>
           {plans.list.map((data) => (
             yearTotal < data.age && (
-            <div key={data.name} className='col-sm-12 col-md-6 col-lg-4 col-xl-4 listCard__top'>
+            <div key={data.name} className='col-sm-6 col-md-6 col-lg-4 col-xl-4 listCard__top'>
 
               {/* Card lista de planes */}
               <Card style={{ borderRadius: 24, height: 687, boxShadow: 'rgba(174, 172, 243, 0.35) 0px 1px 32px' }}>
@@ -384,8 +384,8 @@ function SelectPlan({data}) {
 
   return (
   <>
-  <div className='row'>
-    <div className='col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3 text-center listCard__button'>
+  <div className='row position-absolute bottom-0 w-100'>
+    <div className='col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3 mb-3 text-center listCard__button'>
       <Button variant="danger" onClick={() => selectPlan(data)}>Seleccionar Plan</Button>
     </div>
   </div>

@@ -27,7 +27,7 @@ function StartDetailPlan(valueCookieParse) {
   const Admin = valueCookieParse.valueCookie.user;
   if (Admin === 'jesuspeña') {
     return (
-    <div className='container'>
+    <div className='container page__detailplan'>
       <Header/>
       <ContentDetailPlan valueCookieParse={valueCookieParse}/>
       <Footer/>
@@ -51,7 +51,7 @@ function ContentDetailPlan({valueCookieParse}) {
     {/* Stepper */}
     <main className='body'>
     <div className='row m-0 justify-content-center'>
-      <div className='col-sm-10 col-md-10 col-lg-9 col-xl-8'>
+      <div className='col-sm-10 col-md-9 col-lg-8 col-xl-7 body_content'>
 
         {/* Volver */}
         <div className='row'>

@@ -4,11 +4,14 @@ import { FaPhoneAlt } from "react-icons/fa";
 /* Img */
 import Rimac from '../../Assets/img/png/Rimac.png';
 
+/* Style important */
+import './Header.css';
+
 export const Header = () => {
   return (
   <header className='header'>
     <div className='row m-0 justify-content-center'>
-      <div className='col-sm-12 col-md-10 col-lg-9 col-xl-8'>
+      <div className='col-sm-12 col-md-10 col-lg-9 col-xl-8 header_content'>
 
         {/* Content for modif and changes */}
         <div className='row'>

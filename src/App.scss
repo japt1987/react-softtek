@@ -119,6 +119,10 @@ $color-blue-one: #03050F;
   }
 }
 
+@media (max-width: 1550px) { }
+
+@media (max-width: 1250px) { }
+
 @media (max-width: 992px) { }
 
 @media (max-width: 768px) {
@@ -147,3 +151,5 @@ $color-blue-one: #03050F;
     }
   }
 }
+
+@media (max-width: 360px) { }

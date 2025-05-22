@@ -1,0 +1,26 @@
+/* Media */
+
+@media (max-width: 1550px) {
+    .header .header_content {
+        width: 80%; 
+    }
+}
+
+@media (max-width: 1250px) {
+    .header .header_content {
+        width: 95%; 
+    }
+}
+
+@media (max-width: 992px) { }
+
+@media (max-width: 768px) {
+    .header .header_content {
+        width: 100%;
+        padding: 0px;
+    }
+}
+
+@media (max-width: 576px) { }
+
+@media (max-width: 360px) { }

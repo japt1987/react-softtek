@@ -98,19 +98,52 @@ $color-blue-two: #141938;
     line-height: 28px;
     letter-spacing: 0.1px;
     color: $color-blue-two;
-    min-height: 370px;
+}
+
+/* Media */
+
+@media (max-width: 1550px) {    
+    .body .body_content {
+        width: 68%;    
+    }
+}
+
+@media (max-width: 1250px) {   
+    .body .body_content {
+        width: 80%;    
+    }
 }
 
 @media (max-width: 992px) {
     .plans__card__quote:last-child .col-sm-12 {
-        border-radius: 24px;  
         height: auto;
-      
     }
     .plans__card__quote:last-child .col-sm-12:last-child{
         margin-top: 1.5rem !important;
     }
     .listCard__top {
         margin-bottom: 1.5rem !important;
+    }
+}
+
+@media (max-width: 768px) {    
+    .body .body_content {
+        width: 100%;
+        padding: 0px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page__plans .body .body_content .listCard__top {
+        width: 85%;
+    }
+    .page__plans .body .body_content .listCard__top .card-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .page__plans .body .body_content .listCard__top {
+        width: 95%;
     }
 }

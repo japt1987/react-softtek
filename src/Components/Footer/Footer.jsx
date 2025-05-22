@@ -1,11 +1,14 @@
 /* Img */
 import RimacWhite from '../../Assets/img/png/Vector.png';
 
+/* Style important */
+import './Footer.css';
+
 export const Footer = () => {
   return (
   <footer className='footer'>
     <div className='row m-0 justify-content-center'>
-      <div className='col-sm-12 col-md-10 col-lg-9 col-xl-8'>
+      <div className='col-sm-12 col-md-10 col-lg-9 col-xl-8 footer__content'>
 
         {/* Content for modif and changes */}
         <div className='row pt-3 pb-3'>
