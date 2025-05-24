@@ -8,7 +8,6 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import { useNavigate } from 'react-router-dom';
-import Cookies from 'js-cookie';
 
 /* Components */
 import StepperProgess from '../StepperProgess/StepperProgess';
