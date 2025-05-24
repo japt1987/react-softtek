@@ -15,7 +15,7 @@ import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import Protection from '../../../Assets/img/png/IcProtectionLight.png';
 import AddUser from '../../../Assets/img/png/IcAddUserLight.png';
 
-/* Pages */
+/* Components */
 import Header from '../../../Components/Header/Header';
 import Footer from '../../../Components/Footer/Footer';
 import HorizontalLinearStepper from '../../../Components/Stepper/Stepper';
@@ -52,12 +52,13 @@ function StartPlans(valueCookieParse) {
 
 function ContentPlans() {
   const steps = ['Planes y coberturas', 'Resumen'];
+  const responsive = { active: 1, router: '/', text: true, icons: false, click: false, center: true};
   return (
   <>
   {/* Stepper */}
   <div className='row m-0 justify-content-center stepper__color'>
     <div className='col-sm-9 col-md-7 col-lg-5 col-xl-3'>
-      <HorizontalLinearStepper steps={steps} active={0} text={false} back={false} next={false} end={false} click={false}/>
+      <HorizontalLinearStepper steps={steps} active={1} router={'/'} text={false} back={false} next={false} end={false} click={false} responsive={responsive}/>
     </div>
   </div>
   {/* Stepper */}
@@ -92,6 +93,7 @@ function BeforeContent() {
 
   return (
   <Stack 
+  className='body--back'
   direction="row" 
   spacing={2}>
     <ThemeProvider >
@@ -318,7 +320,7 @@ function ListPlans({myValueYear, checkOptionGroup}) {
                   <Card.Title>
                     <div className={`row ${data.name === 'Plan en Casa y Clínica' ? 'mt-4': 'mt-5'}`}>
                       <div className='auto'>
-                        { data.name === 'Plan en Casa y Clínica' && <label className='body__secure'>Plan recomendado</label> }
+                        {data.name === 'Plan en Casa y Clínica' && <label className='body__secure'>Plan recomendado</label> }
                       </div>
                       <div className='col-12 mt-2 listCard__title'>
                         {data.name}

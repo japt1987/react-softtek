@@ -1,1 +1,87 @@
+.MuiBox-root {
+    height: auto !important;
+   
+    .MuiBox-root {
+        padding: 0px;
+    }
 
+    .MuiButtonBase-root.MuiButton-root.MuiButton-text.Mui-disabled {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+    }
+    .MuiButtonBase-root.MuiButton-root.MuiButton-text {
+        font-weight: 700 !important;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2px;  
+    }
+}
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-text.Stepper--Check {
+    min-width: 50px;
+    .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium {
+        border-style: solid;
+        border-radius: 20px;
+        border-width: 2px;
+    }
+}
+
+.MuiStepConnector-line.MuiStepConnector-lineHorizontal {
+    border-style: dashed;
+     border-width: 2px;
+     border-color: #4F4FFF;
+}
+
+.MuiStepLabel-iconContainer.Mui-active .MuiSvgIcon-root.Mui-active {
+    fill: #4F4FFF;
+    border-color: #4F4FFF;
+    .MuiStepIcon-text {
+         fill: #fff;
+    }
+}
+
+.MuiStepLabel-iconContainer .MuiSvgIcon-root {
+    color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #7981B2;
+    border-radius: 20px;
+    .MuiStepIcon-text { 
+        fill: #7981B2;
+    }
+}
+
+.MuiStepLabel-labelContainer .MuiStepLabel-label {
+    color: #7981B2;
+}
+
+.MuiStepLabel-labelContainer .MuiStepLabel-label.Mui-active {
+    color: #141938;
+}
+
+.MuiStepLabel-label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+}
+
+.MuiStepLabel-label.Mui-active {
+    font-weight: 700 !important;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;   
+}
+
+.MuiTypography-root.MuiTypography-body1 {
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}

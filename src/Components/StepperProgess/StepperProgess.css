@@ -1,0 +1,23 @@
+.MuiPaper-root.MuiPaper-elevation {
+    background-color: transparent;
+}
+
+.MuiLinearProgress-root.MuiLinearProgress-colorPrimary.MuiLinearProgress-determinate.MuiMobileStepper-progress {
+    background-color: #D7DBF5 !important;
+
+    .MuiLinearProgress-bar.MuiLinearProgress-bar1.MuiLinearProgress-barColorPrimary.MuiLinearProgress-bar1Determinate {
+        background-color: #4F4FFF;
+    }
+}
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.Mui-disabled {
+    color: #D7DBF5;
+    --variant-textColor: #D7DBF5;
+    --variant-outlinedColor: #D7DBF5;
+}
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary {
+    color: #4F4FFF;
+    --variant-textColor: #4F4FFF;
+    --variant-outlinedColor: #4F4FFF;
+}

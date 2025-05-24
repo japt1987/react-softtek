@@ -6,9 +6,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 /* Img */
 import Family from './Assets/img/png/Family.png';
 
-/* Pages */
+/* Components */
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
+
+/* Pages */
 import Login from './Pages/Login/Login';
 import Plans from './Pages/Content/Plans/Plans';
 import DetailPlan from './Pages/Content/DetailPlan/DetailPlan';

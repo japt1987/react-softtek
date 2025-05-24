@@ -6,13 +6,13 @@ import { Chip } from '@mui/material';
 import { IoArrowBackCircleOutline } from 'react-icons/io5';
 import { HiUsers } from "react-icons/hi2";
 
-/* Pages */
+/* Components */
 import Header from '../../../Components/Header/Header';
 import Footer from '../../../Components/Footer/Footer';
+import HorizontalLinearStepper from '../../../Components/Stepper/Stepper';
 
 /* Style important */
 import './DetailPlan.css';
-import HorizontalLinearStepper from '../../../Components/Stepper/Stepper';
 
 const DetailPlan = () => {
   const valueCookie = Cookies.get('admin'); // reemplaza 'nombreCookie' por el nombre real
@@ -40,12 +40,13 @@ function StartDetailPlan(valueCookieParse) {
 
 function ContentDetailPlan({valueCookieParse}) {
   const steps = ['Planes y coberturas', 'Resumen'];
+  const responsive = { active: 2, router: '/plans', text: true, icons: false, click: false, center: true};
   return (
     <>
     {/* Stepper */}
     <div className='row m-0 justify-content-center stepper__color'>
       <div className='col-sm-9 col-md-7 col-lg-5 col-xl-3'>
-        <HorizontalLinearStepper steps={steps} active={1} text={false} back={false} next={false} end={false} click={false}/>
+        <HorizontalLinearStepper steps={steps} active={2} router={'/plans'} text={false} back={false} next={false} end={false} click={false} responsive={responsive}/>
       </div>
     </div>
     {/* Stepper */}
@@ -79,6 +80,7 @@ function BeforeContent() {
 
   return (
   <Stack 
+  className='body--back'
   direction="row" 
   spacing={2}>
     <ThemeProvider >

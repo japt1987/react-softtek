@@ -150,6 +150,17 @@ $color-blue-one: #03050F;
       display: none !important;
     }
   }
+  .body {
+    .body--back {
+      display: none !important;
+    }
+  }
+  .stepper__color {
+    .stepper__color--responsive {
+      padding-top: 1rem !important;
+      margin-bottom: 8px;
+    }
+  }
 }
 
 @media (max-width: 360px) { }
