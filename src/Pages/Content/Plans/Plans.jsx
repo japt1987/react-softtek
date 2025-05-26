@@ -12,8 +12,10 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 
 /* Img */
-import Protection from '../../../Assets/img/png/IcProtectionLight.png';
-import AddUser from '../../../Assets/img/png/IcAddUserLight.png';
+import Protection from '../../../Assets/img/png/IcoProtectionLight.png';
+import AddUser from '../../../Assets/img/png/IcoAddUserLight.png';
+import Casa from '../../../Assets/img/png/IcoHomeLight.png';
+import CasaMore from '../../../Assets/img/png/IcoHospitalLight.png';
 
 /* Components */
 import Header from '../../../Components/Header/Header';
@@ -323,7 +325,26 @@ function ListPlans({myValueYear, checkOptionGroup}) {
                         {data.name === 'Plan en Casa y Clínica' && <label className='body__secure'>Plan recomendado</label> }
                       </div>
                       <div className='col-12 mt-2 listCard__title'>
-                        {data.name}
+                        {
+                          data.name.includes('Clínica') || data.name.includes('Chequeo') ? 
+                            <div className='row'>
+                              <div className='col-8 col-sm-8 col-md-7 col-lg-8 col-xl-8'>
+                                {data.name}
+                              </div>
+                              <div className='col-4 col-sm-4 col-md-5 col-lg-4 col-xl-4 text-center'>
+                                {<img src={ CasaMore } loading="lazy" alt={data.name}/>}
+                              </div>
+                            </div>
+                           : 
+                            <div className='row'>
+                              <div className='col-8 col-sm-8 col-md-7 col-lg-8 col-xl-8'>
+                                {data.name}
+                              </div>
+                              <div className='col-4 col-sm-4 col-md-5 col-lg-4 col-xl-4 text-center'>
+                                {<img src={ Casa } loading="lazy" alt={data.name}/>}
+                              </div>
+                            </div>
+                        }
                       </div>
                     </div>
                   </Card.Title>
@@ -387,8 +408,8 @@ function SelectPlan({data}) {
   return (
   <>
   <div className='row mt-auto'>
-    <div className='col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3 mb-3 text-center listCard__button'>
-      <Button variant="danger" onClick={() => selectPlan(data)}>Seleccionar Plan</Button>
+    <div className='col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3 mb-3 text-center'>
+      <Button  className='listCard__button' variant="danger" onClick={() => selectPlan(data)}>Seleccionar Plan</Button>
     </div>
   </div>
   </>

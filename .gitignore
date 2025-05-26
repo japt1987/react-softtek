@@ -11,6 +11,13 @@
 # production
 /build
 
+# components
+/src/Components/CardAll
+/src/Components/CardCarousel
+
+# archives
+/workfiles
+
 # misc
 .DS_Store
 .env.local

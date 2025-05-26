@@ -1,43 +1,52 @@
 .login {
-
-    .login__description {
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: 0.2px;
-        font-weight: 600;
-        color: #03050F;
+   
+   .login__description {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+      font-weight: 600;
+      color: #03050F;
     }
+    
+    .login__condition {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.1px;
+      vertical-align: middle;
+   }
 
-     .login__condition {
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 20px;
-        letter-spacing: 0.1px;
-        vertical-align: middle;
-     }
+   .login__condition--modal {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.1px;
+      text-decoration: underline;
+      font-style: solid;
+      offset: 0%;
+      text-decoration-thickness: 0%;
+   }
+   
+   .login__condition--button {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.4px;
+      text-transform: none;
+      border-radius: 40px;
+      padding: 20px 40px 20px 40px;
+      gap: 8px;
+   }
+   
+   .login__condition--button:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+      animation: blink 1s infinite;
+   }
 
-     .login__condition--modal {
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 20px;
-        letter-spacing: 0.1px;
-        text-decoration: underline;
-        font-style: solid;
-        offset: 0%;
-        text-decoration-thickness: 0%;
-     }
+}
 
-     .login__condition--button {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
-        letter-spacing: 0.4px;
-        text-transform: none;
-        border-radius: 40px;
-        padding: 20px 40px 20px 40px;
-        gap: 8px;
-     }
-
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.MuiMenu-paper {
+   background-color: #fff;
 }
 
 .line {
@@ -49,5 +58,20 @@
 @media (max-width: 768px) {
    .line {
       display: block !important;
+   }
+}
+
+@media (max-width: 576px) {
+   .login { 
+      .login__condition {
+         margin-top: 1.5rem !important;
+      }
+      .login__condition--button {
+         width: 100%;
+         font-size: large;
+         gap: 8px;
+         padding: 18px 40px 18px 40px;
+         margin-top: 0.7rem;
+      }
    }
 }
