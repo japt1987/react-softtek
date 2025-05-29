@@ -11,10 +11,6 @@
 # production
 /build
 
-# components
-/src/Components/CardAll
-/src/Components/CardCarousel
-
 # archives
 /workfiles
 

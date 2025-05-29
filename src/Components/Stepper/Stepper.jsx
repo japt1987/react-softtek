@@ -19,7 +19,9 @@ import { DeleteAllCookies } from '../../Utils/UtilCookie ';
 /* Style important */
 import './Stepper.css';
 
-const HorizontalLinearStepper = ({steps = ['Prueba 1', 'Prueba 2', 'Prueba 3'], active = 0, router= '',  text = true, back = true, next = true, end = true, click=true, responsive={ active: 0, router: '', text: true, icons: true, click: true, center: true}}) => {
+const stepsExample = ['Prueba 1', 'Prueba 2', 'Prueba 3'];
+
+const HorizontalLinearStepper = ({steps = stepsExample, active = 0, router= '',  text = true, back = true, next = true, end = true, click=true, responsive={ active: 0, router: '', text: true, icons: true, click: true, center: true}}) => {
   /*const [activeStep, setActiveStep] = React.useState(0);*/
   const [activeStep, setActiveStep] = React.useState(active-1);
   const [completed, setCompleted] = React.useState({});

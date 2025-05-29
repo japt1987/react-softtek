@@ -38,7 +38,7 @@ function FormLogin({selectDocumentProps, modalShow, setModalShow}) {
 
   // Campos
   const [selectDocument, setSelectDocument] = useState(1);
-  const [selectDocumentText, setSelectDocumentText]  = useState('');
+  const [selectDocumentText, setSelectDocumentText]  = useState('DNI');
   const [numberDocument, setNumberDocument] = useState('');
   const [celphone, setCelphone] = useState('');
   const [checkPolicyOne, setCheckPolicyOne] = useState(false);

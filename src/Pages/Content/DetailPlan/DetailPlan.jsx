@@ -1,15 +1,15 @@
 /* Import styles and script */
 import Cookies from 'js-cookie';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
-import { Card, Stack, ThemeProvider } from 'react-bootstrap';
+import { Stack, ThemeProvider } from 'react-bootstrap';
 import { Chip } from '@mui/material';
 import { IoArrowBackCircleOutline } from 'react-icons/io5';
-import { HiUsers } from "react-icons/hi2";
 
 /* Components */
 import Header from '../../../Components/Header/Header';
 import Footer from '../../../Components/Footer/Footer';
 import HorizontalLinearStepper from '../../../Components/Stepper/Stepper';
+import CardAll from '../../../Components/CardAll/CardAll';
 
 /* Style important */
 import './DetailPlan.css';
@@ -123,50 +123,22 @@ function Content({valueCookieParse}) {
       <div className='col-12'>
 
         {/* Card lista de planes */}
-        <Card style={{ borderRadius: 24, boxShadow: 'rgba(174, 172, 243, 0.35) 0px 1px 32px' }}>
-          <Card.Body>
-            <Card.Title>
-              <div className='row mt-2'>
-                <div className='col-12 detalle__title'>
-                  Precios calculados para:
-                </div>
-              </div>
-            </Card.Title>
-            <Card.Subtitle>
-              {/* Nombre de la persona */}
-              <div className='row mt-3'>
-                <div className='col-12 detalle--name'>
-                  <HiUsers className='me-2'/><label>{ valueCookieParse.valueCookie.name }</label>
-                </div>
-              </div>
-              {/* Nombre de la persona */}
-            </Card.Subtitle>
-            <div className='row mt-2'>
-              <div className='col-12'>
-                <hr className='line d-block'/>
-              </div>
-            </div>
-            {/* Contenido para la data del resumen */}
-            <div className='row'>
-              <div className='col-12'>
-                <Card.Text>
-                  <label className='detale__row'>Responsable de pago</label> <br/>
-                  <label className='detale__row--data'>{valueCookieParse.valueCookie.detail[0].typDoc }: <b>{valueCookieParse.valueCookie.detail[0].dni }</b></label><br/>
-                  <label className='detale__row--data'>Celular: <b>{valueCookieParse.valueCookie.detail[0].cel}</b></label><br/>
-                  <label className='mt-3 detale__row'>Plan elegido</label><br/>
-                  <label className='detale__row--data'>{Data.name}</label><br/>
-                  <label className='detale__row--data'>Costo del Plan: <b>${parseFloat(Data.totPri)}</b> al mes</label>
-                </Card.Text>
-              </div>
-            </div>
-            {/* Contenido para la data del resumen */}
-          </Card.Body>
-        </Card>
+        <CardAll type='sumary' title={'Precios calculados para:'} subtitle = {valueCookieParse.valueCookie.name} line={true} 
+        text={
+        <>
+        <label className='detale__row'>Responsable de pago</label> <br/>
+        <label className='detale__row--data'>{valueCookieParse.valueCookie.detail[0].typDoc }: <b>{valueCookieParse.valueCookie.detail[0].dni }</b></label><br/>
+        <label className='detale__row--data'>Celular: <b>{valueCookieParse.valueCookie.detail[0].cel}</b></label><br/>
+        <label className='mt-3 detale__row'>Plan elegido</label><br/>
+        <label className='detale__row--data'>{Data.name}</label><br/>
+        <label className='detale__row--data'>Costo del Plan: <b>${parseFloat(Data.totPri)}</b> al mes</label>
+        </>
+        } />
         {/* Card lista de planes */}
-        
+
       </div>
     </div>
-          
+
    </>
   )
 }

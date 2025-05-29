@@ -1,0 +1,52 @@
+.carousel-container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.carousel-scenery {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.carousel-controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.carousel--check {
+  .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium {
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+  }
+}
+
+.carousel--label {
+  padding: 10px 0px;
+}
+
+.carousel--not-check {
+    .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium {
+      border-color: #7981B2;
+      fill: #7981B2;
+      border-style: solid;
+      border-radius: 20px;
+      border-width: 2px;
+    }
+}
