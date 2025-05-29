@@ -39,6 +39,11 @@
 
 .carousel--label {
   padding: 10px 0px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #141938;
 }
 
 .carousel--not-check {
